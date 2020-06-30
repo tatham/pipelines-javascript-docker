@@ -6,5 +6,5 @@ ENV JDK_VERSION 1.8.0
 ENV MVN_VERSION 3.5.4
 ENV TZ Australia/Sydney
 
-echo "date:"
-date "+%H:%M:%S   %d/%m/%y"
+RUN echo "date:"
+RUN date "+%H:%M:%S   %d/%m/%y"
