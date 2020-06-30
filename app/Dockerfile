@@ -1,11 +1,10 @@
-FROM node:8
+FROM centos:7
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
-RUN npm ci --only=production
+ENV JDK_VERSION 1.8.0
+ENV MVN_VERSION 3.5.4
+ENV TZ Australia/Sydney
 
-COPY . .
-
-EXPOSE 8080
-CMD [ "npm", "start" ]
+echo "date:"
+date "+%H:%M:%S   %d/%m/%y"
